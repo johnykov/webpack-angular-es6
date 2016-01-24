@@ -14,7 +14,8 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel', // 'babel-loader' is also a legal name to reference
         query: {presets: ['es2015'], plugins: ["add-module-exports"]}
-      }
+      },
+      {test: /.html$/, loader: 'raw', exclude: /(node_modules|bower_components)/}
     ]
   }
 };
