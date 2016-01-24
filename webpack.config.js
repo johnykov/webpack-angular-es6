@@ -15,7 +15,9 @@ module.exports = {
         loader: 'babel', // 'babel-loader' is also a legal name to reference
         query: {presets: ['es2015'], plugins: ["add-module-exports"]}
       },
-      {test: /.html$/, loader: 'raw', exclude: /(node_modules|bower_components)/}
+      {test: /.html$/, loader: 'raw', exclude: /(node_modules|bower_components)/},
+      {test: /.css$/, loader: 'style!css', exclude: /(node_modules|bower_components)/},
+      {test: /.styl$/, loader: 'style!css!stylus', exclude: /(node_modules|bower_components)/}
     ]
   }
 };
