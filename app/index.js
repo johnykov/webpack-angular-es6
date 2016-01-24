@@ -1,4 +1,5 @@
 const angular = require('angular');
 const ngModule = angular.module('app', []);
 
-require('./directives').default(ngModule);
+import directives from './directives';
+directives(ngModule);
