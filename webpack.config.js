@@ -7,5 +7,5 @@ module.exports = {
     path: __dirname + '/app',
     filename: 'bundle.js'
   },
-  plugins: [new webpack.optimize.UglifyJsPlugin()]
+  // plugins: [new webpack.optimize.UglifyJsPlugin()]
 };

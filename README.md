@@ -1,5 +1,6 @@
 ### Usage
 
+    npm install webpack -g
     webpack app/index.js app/bundle.js
 or
 
@@ -9,7 +10,7 @@ or
 When in `webpack.config.js` you change `module.export` to `module.exports` it's fine with just:
 
     webpack
-    
+
 
 ### Development
 How to start a server on `http://localhost:8080/`:
@@ -18,5 +19,10 @@ How to start a server on `http://localhost:8080/`:
 
 
 ### Angular with Webpack - Introduction
-    
+
 [Angular with Webpack - Introduction](https://egghead.io/lessons/angularjs-angular-with-webpack-introduction?series=angular-and-webpack-for-modular-applications)
+
+
+#### Mine tips
+
+ls /Users/jankowalski/.nvm/versions/node/v4.0.0/bin/
