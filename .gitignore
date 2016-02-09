@@ -3,5 +3,6 @@ logs
 npm-debug.log*
 node_modules
 *.iml
-.idea/
+.idea
 app/bundle.js
+dist
