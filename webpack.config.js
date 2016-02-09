@@ -7,13 +7,15 @@ var config = {
     path: __dirname + '/app',
     filename: 'bundle.js'
   },
+
+  plugins: [],
+
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel', // 'babel-loader' is also a legal name to reference
-        query: {presets: ['es2015'], plugins: ["add-module-exports"]}
+        loader: 'ng-annotate!babel'
       },
       {test: /.html$/, loader: 'raw', exclude: /(node_modules|bower_components)/},
       {test: /.css$/, loader: 'style!css', exclude: /(node_modules|bower_components)/},
@@ -24,6 +26,7 @@ var config = {
 
 if (process.env.NODE_ENV === 'production'){
   config.output.path = __dirname + '/dist';
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
 
-module.exports =config;
+module.exports = config;

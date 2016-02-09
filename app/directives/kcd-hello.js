@@ -1,5 +1,5 @@
 export default ngModule => {
-  ngModule.directive('kcdHello', () => {
+  ngModule.directive('kcdHello', ($log) => {
     require('./kcd-hello.styl');
     return {
       restrict: 'E',
@@ -8,6 +8,7 @@ export default ngModule => {
       controllerAs: 'vm',
       controller: function () {
         const vm = this;
+        $log.info("hello");
         vm.greeting = "Hello Webpack";
       }
     }

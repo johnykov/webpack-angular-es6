@@ -26,3 +26,17 @@ How to start a server on `http://localhost:8080/`:
 #### Mine tips
 
 ls /Users/jankowalski/.nvm/versions/node/v4.0.0/bin/
+
+
+
+#### Resolved issues:
+
+1.  https://babeljs.io/docs/usage/babelrc/ <-- package.json babel:
+2. babel6 https://github.com/59naga/babel-plugin-add-module-exports
+
+
+
+## Run with http-server:
+Command to serve files:
+
+    hs dist
