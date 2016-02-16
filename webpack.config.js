@@ -14,17 +14,18 @@ var config = {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         loader: 'ng-annotate!babel'
       },
-      {test: /.html$/, loader: 'raw', exclude: /(node_modules|bower_components)/},
-      {test: /.css$/, loader: 'style!css', exclude: /(node_modules|bower_components)/},
-      {test: /.styl$/, loader: 'style!css!stylus', exclude: /(node_modules|bower_components)/}
+      {test: /.html$/, loader: 'raw', exclude: /(node_modules)/},
+      {test: /.css$/, loader: 'style!css'},
+      {test: /.styl$/, loader: 'style!css!stylus', exclude: /(node_modules)/},
+      {test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/, loader: 'file'}
     ]
   }
 };
 
-if (process.env.NODE_ENV === 'production'){
+if (process.env.NODE_ENV === 'production') {
   config.output.path = __dirname + '/dist';
   config.plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
