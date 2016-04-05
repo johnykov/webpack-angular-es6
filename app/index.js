@@ -5,8 +5,14 @@ import routing from './app.config'
 
 const ngModule = angular.module('app', [uirouter]).config(routing);
 
-import directives from './directives';
-directives(ngModule);
+import header from './directives/header';
+header(ngModule);
+
+import kcdDirective from './directives/kcd';
+kcdDirective(ngModule);
 
 import homeContr from './features/home';
 homeContr(ngModule);
+
+import footer from './directives/footer';
+footer(ngModule);
