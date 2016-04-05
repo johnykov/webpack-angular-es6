@@ -33,6 +33,7 @@ or
 
     ./node_modules/.bin/webpack app/index.js app/bundle.js
 
+
 ### Development
 How to start a server on `http://localhost:8080/`:
   
@@ -63,4 +64,8 @@ When in `webpack.config.js` you change `module.export` to `module.exports` it's 
 
 
 #### License
-do whatever you want
+do whatever you want with this code
+
+### Preview
+
+![webpack + angular + es6](screenshot.png)
