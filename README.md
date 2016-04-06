@@ -60,8 +60,9 @@ When in `webpack.config.js` you change `module.export` to `module.exports` it's 
 #### Resolved issues and references:
   
   1. [Angular with Webpack - Introduction](https://egghead.io/lessons/angularjs-angular-with-webpack-introduction?series=angular-and-webpack-for-modular-applications)
-  2. [.babelrc or package.json: babel section](https://babeljs.io/docs/usage/babelrc/)
-  3. [babel6 plugin for module exports](https://github.com/59naga/babel-plugin-add-module-exports)
+  2. [Using Angular 1.x With ES6 and Webpack](http://angular-tips.com/blog/2015/06/using-angular-1-dot-x-with-es6-and-webpack/)
+  3. [.babelrc or package.json: babel section](https://babeljs.io/docs/usage/babelrc/)
+  4. [babel6 plugin for module exports](https://github.com/59naga/babel-plugin-add-module-exports)
 
 
 #### License
