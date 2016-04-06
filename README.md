@@ -25,7 +25,7 @@ Tools:
     
 ### Development
 
-How to start a server on `http://localhost:9090/` (bundles are server from memory):
+How to start a server on `http://localhost:9090/` (bundles are served from memory):
 
     npm start
     
