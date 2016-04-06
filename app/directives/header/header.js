@@ -1,5 +1,5 @@
 export default ngModule => {
-  ngModule.directive('fixedHeader', ($log) => {
+  ngModule.directive('fixedHeader', () => {
     require('./header.css');
     return {
       restrict: 'E',

@@ -1,8 +1,8 @@
-import './home.css';
-import routing from './home.routes';
-import HomeController from './home.controller';
+import "./home.css";
+import homeRouting from "./home.routes";
+import HomeController from "./home.controller";
 
 export default ngModule => {
-  ngModule.config(routing)
+  ngModule.config(homeRouting)
     .controller('HomeController', HomeController);
 };

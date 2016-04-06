@@ -1,5 +1,5 @@
 export default ngModule => {
-  ngModule.directive('footerDir', ($log) => {
+  ngModule.directive('footerDir', () => {
     require('./footer.css');
     return {
       restrict: 'E',

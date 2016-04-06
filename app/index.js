@@ -11,8 +11,11 @@ header(ngModule);
 import kcdDirective from './directives/kcd';
 kcdDirective(ngModule);
 
-import homeContr from './features/home';
-homeContr(ngModule);
+import mainCtrl from './features/main';
+mainCtrl(ngModule);
+
+import homeCtrl from './features/home';
+homeCtrl(ngModule);
 
 import footer from './directives/footer';
 footer(ngModule);
