@@ -10,6 +10,9 @@ export default ngModule => {
         const vm = this;
         $log.info("hello");
         vm.greeting = "Hello Webpack";
+      },
+      link: (scope, element, attrs) => {
+        element.fadeOut();
       }
     }
   })

@@ -8,7 +8,11 @@ var config = {
     filename: 'bundle.js'
   },
 
-  plugins: [],
+  plugins: [new webpack.ProvidePlugin({
+    $: "jquery",
+    jQuery: "jquery",
+    "window.jQuery": "jquery"
+  })], //https://webpack.github.io/docs/shimming-modules.html
 
   module: {
     loaders: [
