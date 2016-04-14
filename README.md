@@ -71,3 +71,8 @@ do whatever you want with this code
 ### Preview
 
 ![webpack + angular + es6](screenshot.png)
+
+
+## TODO
+
+1. add express to serve prod with rewrite option enabled

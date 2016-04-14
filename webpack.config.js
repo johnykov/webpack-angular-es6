@@ -8,11 +8,16 @@ var config = {
     filename: 'bundle.js'
   },
 
-  plugins: [new webpack.ProvidePlugin({
+  plugins: [new webpack.ProvidePlugin({//https://webpack.github.io/docs/shimming-modules.html
     $: "jquery",
     jQuery: "jquery",
     "window.jQuery": "jquery"
-  })], //https://webpack.github.io/docs/shimming-modules.html
+  }),
+    new webpack.DefinePlugin({
+      ON_TEST: process.env.NODE_ENV === 'test'
+    })
+
+  ],
 
   module: {
     loaders: [
@@ -26,6 +31,9 @@ var config = {
       {test: /.styl$/, loader: 'style!css!stylus', exclude: /(node_modules)/},
       {test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/, loader: 'file'}
     ]
+  },
+  devServer: {
+    historyApiFallback: true //html5mode on for dev
   }
 };
 

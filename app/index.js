@@ -1,21 +1,15 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import angular from 'angular'
-import uirouter from 'angular-ui-router';
-import routing from './app.config'
+import "bootstrap/dist/css/bootstrap.css";
+import angular from "angular";
+import uirouter from "angular-ui-router";
+import routing from "./app.config";
 
+if (ON_TEST) {
+  require('angular-mocks');
+  // require('angular-mocks/angular-mocks');
+}
 const ngModule = angular.module('app', [uirouter]).config(routing);
 
-import headerComponent from './components/header';
-headerComponent(ngModule);
-
-import kcdDirective from './components/kcd';
-kcdDirective(ngModule);
-
-import mainCtrl from './features/main';
-mainCtrl(ngModule);
-
-import homeCtrl from './features/home';
-homeCtrl(ngModule);
-
-import footerComponent from './components/footer';
-footerComponent(ngModule);
+require('./components/common')(ngModule);
+require('./components/kcd')(ngModule);
+require('./features/main')(ngModule);
+require('./features/home')(ngModule);

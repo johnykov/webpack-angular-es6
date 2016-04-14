@@ -1,4 +1,8 @@
 export default ngModule => {
+  if (ON_TEST) {
+    require('./kcd-hello.test')(ngModule);
+  }
+
   ngModule.directive('kcdHello', ($log) => {
     require('./kcd-hello.styl');
     return {
