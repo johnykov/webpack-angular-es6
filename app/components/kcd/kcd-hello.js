@@ -16,7 +16,7 @@ export default ngModule => {
         vm.greeting = "Hello Webpack";
       },
       link: (scope, element, attrs) => {
-        element.fadeOut();
+        element.fadeOut(1000, "linear", () =>{});
       }
     }
   })
