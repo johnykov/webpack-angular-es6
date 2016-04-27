@@ -76,3 +76,4 @@ do whatever you want with this code
 ## TODO
 
 1. add express to serve prod with rewrite option enabled
+2. test to use angular mocks

@@ -2,7 +2,7 @@
   "scripts": {
     "test": "NODE_ENV=test karma start",
     "start": "webpack-dev-server --content-base app --port 9090",
-    "build": "NODE_ENV=production webpack && cp app/index.html dist/index.html",
+    "build": "rm -rf dist/ && NODE_ENV=production webpack && cp app/index.html dist/index.html",
     "dist": "npm run build && hs dist -p 9090 -o"
   },
   "devDependencies": {
