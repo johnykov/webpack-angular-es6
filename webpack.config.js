@@ -2,27 +2,23 @@ var webpack = require('webpack');
 
 var config = {
   context: __dirname + '/app',
-  entry: {
-    app: './index.js',
-    vendor: './vendor.js'
-  },
+  entry: './index.js',
   output: {
     path: __dirname + '/app',
-    filename: 'app.bundle.js'
+    filename: 'bundle.js'
   },
 
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
     new webpack.ProvidePlugin({//https://webpack.github.io/docs/shimming-modules.html
-    $: "jquery",
-    jQuery: "jquery",
-    "window.jQuery": "jquery"
-  }),
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    }),
     new webpack.DefinePlugin({
       ON_TEST: process.env.NODE_ENV === 'test'
     })
   ],
-  
+
   module: {
     loaders: [
       {test: /\.js$/, exclude: /(node_modules)/, loader: 'ng-annotate!babel'},
