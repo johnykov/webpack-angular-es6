@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 var config = {
   context: __dirname + '/app',
-  entry: './index.js',
+  entry:'./index.js',
   output: {
     path: __dirname + '/app',
     filename: 'bundle.js'
@@ -29,6 +29,8 @@ var config = {
     ]
   },
   devServer: {
+    contentBase: "app",
+    port: "9090",
     historyApiFallback: true //html5mode on for dev
   }
 };
