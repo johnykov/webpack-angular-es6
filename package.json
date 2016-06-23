@@ -3,7 +3,8 @@
     "test": "NODE_ENV=test karma start",
     "start": "webpack-dev-server --hot --inline --progress",
     "build": "rm -rf dist/ && NODE_ENV=production webpack && cp app/index.html dist/index.html",
-    "dist": "npm run build && hs dist -p 9090 -o"
+    "dist": "npm run build && hs dist -p 9090 -o",
+    "dev": "nodemon app.js"
   },
   "devDependencies": {
     "angular": "^1.5.5",
@@ -27,6 +28,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
     "ng-annotate-loader": "^0.1.0",
+    "nodemon": "^1.9.2",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
@@ -42,5 +44,8 @@
     "plugins": [
       "add-module-exports"
     ]
+  },
+  "dependencies": {
+    "express": "^4.14.0"
   }
 }

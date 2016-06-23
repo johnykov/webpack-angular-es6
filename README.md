@@ -1,4 +1,4 @@
-## WTF is this?
+## WAT is this?
 
 This repo is to showcase a usage of webpack. It's:
 
@@ -9,18 +9,18 @@ This repo is to showcase a usage of webpack. It's:
 Idea is based on egghead.io videos and it's goal is glorify modules. 
 
 
+---
+
+
 ### Requirements
 
 Tools:
 
-  1. node >= 4.x (supports es6) I recommend [nvm](https://github.com/creationix/nvm)
-  2. webpack:
+  1. node >= 5.x (supports es6) I recommend [nvm](https://github.com/creationix/nvm)
+  2. when cloned type:
       
-        npm install webpack -g
 
-  3. when cloned type: 
-      
-        npm i[nstall]
+        npm i
 
     
 ### Development
@@ -39,23 +39,22 @@ Command to serve dist files:
 
     npm run dist
     
-### Usage of webpack 
 
-Directly:
-
-    webpack
-    webpack app/index.js app/bundle.js
-
-or local
-
-    ./node_modules/.bin/webpack app/index.js app/bundle.js
-    
 #### Other
 
 Remarks about my mistake:
 When in `webpack.config.js` you change `module.export` to `module.exports` it's fine with just:
 
     webpack
+
+## Express server
+
+Might be run with the one of the following (only after `npm run dist`):
+
+    npm run dev (this one uses nodemon)
+    node app.js
+
+ Runs on `localhost:3000`.
 
 #### Resolved issues and references:
   
@@ -66,7 +65,7 @@ When in `webpack.config.js` you change `module.export` to `module.exports` it's 
 
 
 #### License
-do whatever you want with this code
+[LICENSE](LICENSE)
 
 ### Preview
 
@@ -75,5 +74,9 @@ do whatever you want with this code
 
 ## TODO
 
-1. add express to serve prod with rewrite option enabled
-2. test to use angular mocks
+1. test to use angular mocks
+2. MONDO integration
+
+[Mondo](https://getmondo.co.uk/) is cool, check it out ;) Here I've created a basic angular integration with its API.
+
+[Mondo API](https://getmondo.co.uk/docs/)
