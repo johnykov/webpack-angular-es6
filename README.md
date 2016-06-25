@@ -74,6 +74,10 @@ Might be run with the one of the following (only after `npm run dist`):
 
 ## TODO
 
+  * [split-app-and-vendor-code](https://webpack.github.io/docs/code-splitting.html#split-app-and-vendor-code)
+  * [split css to native separate file](https://webpack.github.io/docs/stylesheets.html)
+
+
 1. test to use angular mocks
 2. MONDO integration
 
