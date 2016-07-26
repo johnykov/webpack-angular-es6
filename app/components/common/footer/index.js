@@ -1,3 +1,10 @@
 export default ngModule => {
-  require('./footer')(ngModule)
+  ngModule.directive('footerDir', () => {
+    require('./footer.css');
+    return {
+      restrict: 'E',
+      scope: {},
+      template: require('./footer.html')
+    }
+  })
 };

@@ -1,3 +1,10 @@
 export default ngModule => {
-  require('./header')(ngModule)
+  ngModule.directive('fixedHeader', () => {
+    require('./header.css');
+    return {
+      restrict: 'E',
+      scope: {},
+      template: require('./header.html')
+    }
+  })
 };

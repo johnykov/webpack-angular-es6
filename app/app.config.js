@@ -1,5 +1,3 @@
-// routing.$inject = ['$urlRouterProvider', '$locationProvider'];
-
 export default function routing($urlRouterProvider, $locationProvider) {
   "ngInject";
   $locationProvider.html5Mode(true);
